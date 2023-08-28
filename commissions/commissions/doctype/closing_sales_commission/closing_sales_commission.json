@@ -1,0 +1,235 @@
+{
+ "autoname": "CSC/.##",
+ "creation": "2019-12-09 11:58:50.334768",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "calculate_only_the_paid_bills",
+  "calculate_only_the_delivered_invoices",
+  "section_break_3",
+  "type",
+  "beneficiary",
+  "commission_template",
+  "commission_balance",
+  "the_last_closing_date",
+  "from_date",
+  "to_date",
+  "get_data",
+  "column_break_6",
+  "paid_bills",
+  "unpaid_bills",
+  "monthly_target_temp",
+  "monthly_target",
+  "commission",
+  "monthly_target_achieved",
+  "closing_balance",
+  "section_break_11",
+  "transaction",
+  "amended_from",
+  "section_break_24",
+  "created_by",
+  "column_break_26",
+  "confirmed_by",
+  "section_break_28",
+  "cb_sales_team",
+  "cb_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Closing Sales Commission",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paid_bills",
+   "fieldtype": "Currency",
+   "label": "Paid Bills",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unpaid_bills",
+   "fieldtype": "Currency",
+   "label": "Unpaid Bills",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monthly_target",
+   "fieldtype": "Data",
+   "label": "Monthly Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Percent",
+   "label": "Commission (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Table",
+   "label": "Transaction",
+   "options": "Transaction"
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Beneficiary",
+   "options": "type"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Commission Type",
+   "options": "Sales Person Master\nSales Team Master\nSales Partner Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monthly_target_achieved",
+   "fieldtype": "Currency",
+   "label": "Monthly Target Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "closing_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Closing Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "the_last_closing_date",
+   "fieldtype": "Date",
+   "label": "The Last Closing Date"
+  },
+  {
+   "fetch_from": "beneficiary.commission_template",
+   "fieldname": "commission_template",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Commission Template",
+   "options": "Commission Template"
+  },
+  {
+   "default": "0",
+   "fieldname": "calculate_only_the_paid_bills",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Calculate only the paid bills "
+  },
+  {
+   "default": "0",
+   "fieldname": "calculate_only_the_delivered_invoices",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Calculate only the delivered invoices "
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "monthly_target_temp",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Monthly Target Temp"
+  },
+  {
+   "fieldname": "commission_balance",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Commission Balance",
+   "options": "Commission Balance"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirmed_by",
+   "fieldtype": "Data",
+   "label": "Confirmed By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "cb_sales_team",
+   "fieldtype": "Table",
+   "label": "CB Sales Team",
+   "options": "CB Sales Team"
+  },
+  {
+   "fieldname": "cb_value",
+   "fieldtype": "Currency",
+   "label": "CB Value"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-12-23 13:08:35.608045",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Closing Sales Commission",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

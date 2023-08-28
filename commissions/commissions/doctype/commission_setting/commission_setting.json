@@ -1,0 +1,67 @@
+{
+ "creation": "2019-12-09 12:00:45.696772",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contact_the_customer_to_a_seller",
+  "calculate_only_the_paid_bills",
+  "calculate_only_the_delivered_invoices",
+  "do_not_calculate_return_invoice",
+  "allow_commissions_to_be_closed_after_30_days"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "contact_the_customer_to_a_seller",
+   "fieldtype": "Check",
+   "label": "Contact the customer to a seller"
+  },
+  {
+   "default": "0",
+   "fieldname": "calculate_only_the_paid_bills",
+   "fieldtype": "Check",
+   "label": "Calculate only the paid bills "
+  },
+  {
+   "default": "0",
+   "fieldname": "calculate_only_the_delivered_invoices",
+   "fieldtype": "Check",
+   "label": "Calculate only the delivered invoices "
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_commissions_to_be_closed_after_30_days",
+   "fieldtype": "Check",
+   "label": "Allow commissions to be closed after 30 days"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_not_calculate_return_invoice",
+   "fieldtype": "Check",
+   "label": "Do not calculate return invoice"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2019-12-27 12:20:22.815243",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Commission Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

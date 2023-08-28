@@ -1,0 +1,91 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:sales_team_name",
+ "creation": "2019-12-09 14:47:28.164152",
+ "description": "All Sales Transactions can be tagged against multiple **Sales Persons** so that you can set and monitor targets.",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_team_name",
+  "is_group",
+  "enabled",
+  "column_break_5",
+  "commission_template",
+  "section_break_6",
+  "employee"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Group",
+   "oldfieldname": "is_group",
+   "oldfieldtype": "Select"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "commission_template",
+   "fieldtype": "Link",
+   "label": "Commission Template",
+   "options": "Commission Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_team_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sales Team Name",
+   "oldfieldname": "sales_person_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Sales Team"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table",
+   "label": "Employee",
+   "options": "Employee Table"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "icon": "icon-user",
+ "modified": "2019-12-27 13:21:36.959255",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Sales Team Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}

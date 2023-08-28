@@ -1,0 +1,91 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:sales_person_name",
+ "creation": "2019-12-09 14:46:41.482217",
+ "description": "All Sales Transactions can be tagged against multiple **Sales Persons** so that you can set and monitor targets.",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "name_and_employee_id",
+  "sales_person_name",
+  "commission_template",
+  "enabled",
+  "cb0",
+  "employee",
+  "commission_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_and_employee_id",
+   "fieldtype": "Section Break",
+   "label": "Name and Employee ID",
+   "options": "icon-user"
+  },
+  {
+   "fieldname": "sales_person_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sales Person Name",
+   "oldfieldname": "sales_person_name",
+   "oldfieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "cb0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_template",
+   "fieldtype": "Link",
+   "label": "Commission Template",
+   "options": "Commission Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_balance",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Commission Balance",
+   "options": "Commission Balance"
+  }
+ ],
+ "icon": "icon-user",
+ "modified": "2019-12-27 13:21:49.069254",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Sales Person Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}

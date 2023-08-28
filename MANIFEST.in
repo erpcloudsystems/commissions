@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include commissions *.css
+recursive-include commissions *.csv
+recursive-include commissions *.html
+recursive-include commissions *.ico
+recursive-include commissions *.js
+recursive-include commissions *.json
+recursive-include commissions *.md
+recursive-include commissions *.png
+recursive-include commissions *.py
+recursive-include commissions *.svg
+recursive-include commissions *.txt
+recursive-exclude commissions *.pyc

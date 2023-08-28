@@ -1,0 +1,55 @@
+{
+ "creation": "2019-12-09 12:42:34.985259",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "total_commission",
+  "paid",
+  "balance"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Available Balance",
+   "precision": "4"
+  },
+  {
+   "fieldname": "total_commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total commission",
+   "precision": "4"
+  },
+  {
+   "fieldname": "paid",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Paid",
+   "precision": "4"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-23 11:22:05.448849",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Balance Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,99 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2019-12-09 12:00:16.103834",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable",
+  "company",
+  "template_name",
+  "monthly_target",
+  "commission_rate",
+  "minimum_monthly_target",
+  "commission_in_less_then_monthly_target",
+  "valid_till",
+  "section_break_2",
+  "territory"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Table",
+   "label": "Territory",
+   "options": "Territory Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "monthly_target",
+   "fieldtype": "Currency",
+   "label": "Monthly Target"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate (%)"
+  },
+  {
+   "fieldname": "commission_in_less_then_monthly_target",
+   "fieldtype": "Percent",
+   "label": "Commission in Less Then Monthly Target (%)"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "fieldname": "minimum_monthly_target",
+   "fieldtype": "Currency",
+   "label": "Minimum Monthly Target"
+  }
+ ],
+ "modified": "2019-12-20 12:10:13.342422",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Commission Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

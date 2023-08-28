@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2019, Tech Station and contributors
+# For license information, please see license.txt
+
+from __future__ import unicode_literals
+import frappe
+from frappe.model.document import Document
+
+class ClosingSalesCommission(Document):
+	pass
+
+@frappe.whitelist(allow_guest=True)
+def insert_data(from_date,to_date,beneficiary,type):
+	query="select mode_of_payment,posting_date,name,grand_total from `tabSales Invoice` where status = 'Paid' and beneficiary = '"+str(beneficiary)+"' and type = '"+str(type)+"' and posting_date between '"+str(from_date)+"' and '"+str(to_date)+"';"
+	li=[]
+	dic=frappe.db.sql(query, as_dict=True)
+	for i in dic:
+		mode_of_payment,posting_date,name,grand_total = i["mode_of_payment"],i["posting_date"],i["name"],i["grand_total"]
+		li.append([mode_of_payment,posting_date,name,grand_total])
+	return li
+
+def updateMOP(doc,method):
+	for d in doc.references:
+		if d.reference_doctype == "Sales Invoice":
+			sv = frappe.get_doc(d.reference_doctype,d.reference_name)
+			sv.mode_of_payment = doc.mode_of_payment
+			sv.save()
+
+@frappe.whitelist(allow_guest=True)
+def getsalesData(type,beneficiary):
+	if type == "Sales Partner Master":
+        	sales = frappe.db.sql("""select monthly_target,comm_rate from `tabSales Partner Master` 
+		where beneficiary = '{1}';""".format(beneficiary), as_list=1)
+		return sales
+

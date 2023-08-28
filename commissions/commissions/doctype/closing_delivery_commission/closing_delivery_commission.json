@@ -1,0 +1,212 @@
+{
+ "autoname": "CDC/.##",
+ "creation": "2019-12-23 13:05:57.470693",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "beneficiary",
+  "commission_balance",
+  "the_last_closing_date",
+  "from_date",
+  "to_date",
+  "get_data",
+  "column_break_6",
+  "number_of_orders_collected",
+  "number_of_orders_delivered",
+  "number_of_orders_delay",
+  "number_of_orders_rejected",
+  "number_of_failed_orders",
+  "collection_commission",
+  "delivery_commission",
+  "closing_balance",
+  "section_break_11",
+  "transaction",
+  "section_break_24",
+  "created_by",
+  "column_break_26",
+  "confirmed_by",
+  "section_break_28",
+  "cb_sales_team",
+  "cb_value",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Commission Type",
+   "options": "\nDelegate\nShipping Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Beneficiary",
+   "options": "type"
+  },
+  {
+   "fieldname": "the_last_closing_date",
+   "fieldtype": "Date",
+   "label": "The Last Closing Date"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "closing_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Closing Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Table",
+   "label": "Transaction",
+   "options": "Delivery Transaction"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirmed_by",
+   "fieldtype": "Data",
+   "label": "Confirmed By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "cb_sales_team",
+   "fieldtype": "Table",
+   "label": "CB Sales Team",
+   "options": "CB Sales Team"
+  },
+  {
+   "fieldname": "cb_value",
+   "fieldtype": "Currency",
+   "label": "CB Value"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Closing Delivery Commission",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_orders_delivered",
+   "fieldtype": "Int",
+   "label": "Number Of Orders (Paid)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_failed_orders",
+   "fieldtype": "Int",
+   "label": "Number Of Orders Cancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_orders_collected",
+   "fieldtype": "Int",
+   "label": "Number Of Orders (Cash On Delivery)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_commission",
+   "fieldtype": "Currency",
+   "label": "Delivery Commission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "collection_commission",
+   "fieldtype": "Currency",
+   "label": "Commission For Delivery & Collection",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_orders_delay",
+   "fieldtype": "Int",
+   "label": "Number Of Orders Delay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_orders_rejected",
+   "fieldtype": "Int",
+   "label": "Number Of Orders Rejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission_balance",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Commission Balance",
+   "options": "Commission Balance"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-12-27 15:00:15.154746",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Closing Delivery Commission",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

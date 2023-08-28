@@ -1,0 +1,135 @@
+from __future__ import unicode_literals
+from frappe import _
+
+def get_data():
+	return [
+	{
+            "label": _("Masters"),
+            "items": [
+		{
+                    "type": "doctype",
+                    "name": "Closing Sales Commission",
+                    "label": _("Closing Sales Commission"),
+                    "description": _("Closing Sales Commission"),
+                                        "onboard": 1,
+                },
+		{
+                    "type": "doctype",
+                    "name": "Closing Cars Commission",
+                    "label": _("Closing Cars Commission"),
+                    "description": _("Closing Cars Commission"),
+                                        "onboard": 1,
+                },
+		{
+                    "type": "doctype",
+                    "name": "Closing Drivers Commission",
+                    "label": _("Closing Drivers Commission"),
+                    "description": _("Closing Drivers Commission"),
+                                        "onboard": 1,
+                },
+		{
+                    "type": "doctype",
+                    "name": "Closing Delivery Commission",
+                    "label": _("Closing Delivery Commission"),
+                    "description": _("Closing Delivery Commission"),
+                                        "onboard": 1,
+                },
+                {
+                    "type": "doctype",
+                    "name": "Commission Balance",
+                    "label": _("Commission Balance"),
+                    "description": _("Commission Balance"),
+					"onboard": 1,
+                },
+		{
+                    "type": "doctype",
+                    "name": "Paying Commission Balance",
+                    "label": _("Paying Commission Balance"),
+                    "description": _("Paying Commission Balance"),
+					"onboard": 1,
+                }
+            ]
+        },
+	{
+            "label": _("Sellers"),
+            "items": [
+                {
+                    "type": "doctype",
+                    "name": "Sales Person Master",
+                    "label": _("Sales Person"),
+                    "description": _("Sales Person"),
+                                        "onboard": 1,
+                },
+                {
+                    "type": "doctype",
+                    "name": "Sales Team Master",
+                    "label": _("Sales Team"),
+                    "description": _("Sales Team"),
+                                        "onboard": 1,
+                },
+                {
+                    "type": "doctype",
+                    "name": "Sales Partner Master",
+                    "label": _("Sales Partner"),
+                    "description": _("Sales Partner"),
+                                        "onboard": 1,
+                }
+            ]
+        },
+	{
+            "label": _("Sellers"),
+            "items": [
+                {
+                    "type": "doctype",
+                    "name": "Sales Person Master",
+                    "label": _("Sales Person"),
+                    "description": _("Sales Person"),
+                                        "onboard": 1,
+                },
+		{
+                    "type": "doctype",
+                    "name": "Sales Team Master",
+                    "label": _("Sales Team"),
+                    "description": _("Sales Team"),
+                                        "onboard": 1,
+                },
+                {
+                    "type": "doctype",
+                    "name": "Sales Partner Master",
+                    "label": _("Sales Partner"),
+                    "description": _("Sales Partner"),
+                                        "onboard": 1,
+                }
+            ]
+        },
+	{
+            "label": _("Report"),
+            "items": [
+                {
+                        "type": "report",
+                        "is_query_report": True,
+                        "name": "Pending Commission Balance",
+                        "doctype": "Commission Balance"
+                }
+            ]
+        },
+	{
+            "label": _("Settings"),
+            "items": [
+		{
+                    "type": "doctype",
+                    "name": "Commission Template",
+                    "label": _("Commission Template"),
+                    "description": _("Commission Template"),
+                                        "onboard": 1,
+                },
+                {
+                    "type": "doctype",
+                    "name": "Commission Setting",
+                    "label": _("Commission Setting"),
+                    "description": _("Commission Setting"),
+                                        "onboard": 1,
+                }
+            ]
+        }
+]

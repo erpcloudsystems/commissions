@@ -1,0 +1,102 @@
+{
+ "autoname": "CB/.##",
+ "creation": "2019-12-09 11:59:29.336183",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "beneficiary",
+  "section_break_8",
+  "sales_team",
+  "section_break_2",
+  "employee",
+  "customer",
+  "column_break_5",
+  "balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Beneficiary",
+   "options": "type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Balance Detail"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Commission Type",
+   "options": "Sales Person Master\nSales Team Master\nSales Partner Master\nDelegate\nShipping Company\nCar Drivers\nDelivery Car",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type == \"Sales Person Master\";",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == \"Sales Partner Master\";",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Partner",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == \"Sales Team Master\";",
+   "fieldname": "sales_team",
+   "fieldtype": "Table",
+   "label": "Sales Team",
+   "options": "Balance Detail"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "modified": "2020-01-02 20:52:59.435983",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Commission Balance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "beneficiary",
+ "track_changes": 1
+}

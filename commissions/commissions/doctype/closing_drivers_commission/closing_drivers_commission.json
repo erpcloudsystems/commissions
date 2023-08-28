@@ -1,0 +1,177 @@
+{
+ "autoname": "CDRIC/.##",
+ "creation": "2020-01-01 21:15:58.838538",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "beneficiary",
+  "commission_balance",
+  "the_last_closing_date",
+  "from_date",
+  "to_date",
+  "get_data",
+  "column_break_6",
+  "number_of_orders_collected",
+  "commission",
+  "closing_balance",
+  "section_break_11",
+  "transaction",
+  "section_break_24",
+  "created_by",
+  "column_break_26",
+  "confirmed_by",
+  "section_break_28",
+  "cb_sales_team",
+  "cb_value",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Commission Type",
+   "options": "\nCar Drivers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Beneficiary",
+   "options": "type"
+  },
+  {
+   "fieldname": "commission_balance",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Commission Balance",
+   "options": "Commission Balance"
+  },
+  {
+   "fieldname": "the_last_closing_date",
+   "fieldtype": "Date",
+   "label": "The Last Closing Date"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_orders_collected",
+   "fieldtype": "Int",
+   "label": "Number Of Orders Delivered",
+   "read_only": 1
+  },
+  {
+   "fieldname": "closing_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Closing Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Table",
+   "label": "Transaction",
+   "options": "Delivery Transaction"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirmed_by",
+   "fieldtype": "Data",
+   "label": "Confirmed By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "cb_sales_team",
+   "fieldtype": "Table",
+   "label": "CB Sales Team",
+   "options": "CB Sales Team"
+  },
+  {
+   "fieldname": "cb_value",
+   "fieldtype": "Currency",
+   "label": "CB Value"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Closing Drivers Commission",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "label": "Commission",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-01-02 20:42:22.041798",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Closing Drivers Commission",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

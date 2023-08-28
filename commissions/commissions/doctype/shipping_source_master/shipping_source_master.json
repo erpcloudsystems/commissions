@@ -1,0 +1,82 @@
+{
+ "creation": "2019-12-23 13:46:53.746675",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_name",
+  "delivery_commission",
+  "collection_commission",
+  "enabled",
+  "column_break_5",
+  "source_type",
+  "source"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Delivery Commission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "collection_commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Collection Commission",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Currency",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "Source",
+   "reqd": 1
+  }
+ ],
+ "modified": "2019-12-23 13:46:53.746675",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Shipping Source Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

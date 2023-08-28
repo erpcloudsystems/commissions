@@ -1,0 +1,178 @@
+{
+ "autoname": "PCB/.###",
+ "creation": "2019-12-18 13:49:38.040825",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "commission_balance",
+  "cb",
+  "type",
+  "beneficiary",
+  "employee",
+  "account_details_section",
+  "mode_of_payment",
+  "column_break_7",
+  "account_paid_from",
+  "account_paid_to",
+  "transaction_details_section",
+  "amount",
+  "column_break_6",
+  "available_balance",
+  "amended_from",
+  "section_break_16",
+  "created_by",
+  "column_break_18",
+  "confirmed_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nSales Person Master\nSales Team Master\nSales Partner Master\nDelegate\nShipping Company\nCar Drivers\nDelivery Car"
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Dynamic Link",
+   "label": "Beneficiary",
+   "options": "type"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Sales Team Master\";",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Paying Commission Balance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Details"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "available_balance",
+   "fieldtype": "Currency",
+   "label": "Available Balance",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "account_details_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode of Payment",
+   "options": "\nCash\nBank",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_paid_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Paid To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_paid_from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Paid From",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_balance",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Commission Balance"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirmed_by",
+   "fieldtype": "Data",
+   "label": "Confirmed By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "CB"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-01-02 20:54:11.212208",
+ "modified_by": "Administrator",
+ "module": "Commissions",
+ "name": "Paying Commission Balance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "beneficiary",
+ "track_changes": 1
+}
